@@ -1,0 +1,28 @@
+{
+    "name": "nlybe/entity_lists",
+    "description": "Lists of entities in admin area on Elgg",
+    "type": "elgg-plugin",
+    "keywords": [
+        "elgg",
+        "plugin",
+        "datatables",
+        "entity lists"
+    ],
+    "homepage": "https://github.com/nlybe/Elgg-DataTablesAPI",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Nikos Lyberakis",
+            "email": "nikos@lyberakis.gr",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "composer/installers": ">=1.0.8",
+        "nlybe/datatables_api": ">=2.2.3"
+    },        
+    "extra": {
+        "installer-name": "entity_lists"
+    }
+}
