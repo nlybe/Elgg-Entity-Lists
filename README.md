@@ -13,6 +13,4 @@ This plugin is based on [DataTables API](https://github.com/nlybe/Elgg-DataTable
 
 ## Future Tasks List
 - [ ] Add more actions on lists
-- [ ] List of entities: add list of users
-- [ ] List of entities: add list of groups
 - [ ] List of entities: add more filter options
