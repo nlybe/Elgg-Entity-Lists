@@ -3,12 +3,12 @@
     <name>Entity Lists</name>
     <id>entity_lists</id>
     <author>Nikos Lyberakis</author>
-    <version>2.3.1</version>
+    <version>2.3.2</version>
     <category>bundled</category>
     <category>Admin</category>
     <description>Lists of entities in admin area</description>
     <website>https://github.com/nlybe/</website>
-    <copyright>(C) Nikos Lyberakis 2012 - 2017</copyright>
+    <copyright>(C) Nikos Lyberakis 2012 - 2018</copyright>
     <license>GNU General Public License version 2</license>
     <requires>
         <type>elgg_release</type>
@@ -17,7 +17,7 @@
     <requires>
         <type>plugin</type>
         <name>datatables_api</name>
-        <version>2.2.3</version>
+        <version>2.3.8</version>
     </requires>  
     <activate_on_install>false</activate_on_install>
 </plugin_manifest>

@@ -18,47 +18,41 @@ $output = elgg_format_element(
     ['style' => 'margin: 0 0 15px;'], 
     elgg_echo('entity_lists:settings:basic_settings:intro'
 ));
+
 foreach ($types as $key => $t) {
-
     if ($key == 'user' || $key == 'group') {
-//  do nothing at the moment        
-//        $tmp = elgg_format_element('div', [], elgg_format_element('strong', [], $key));
-//        
-//        $param_name_entity = 'entity_lists_' . $key;
-//        $param_name = 'params[' . $param_name_entity . ']';
-//        $tmp .= elgg_view_input('radio', array(
-//            'name' => $param_name, 
-//            'value' => ($plugin->$param_name_entity?$plugin->$param_name_entity:EntityListsOptions::EntityLists_NO), 
-//            'options' => $potential_yes_no, 
-//            'align' => 'horizontal'
-//        ));
-//        
-//        //$tmp .= elgg_format_element('span', ['class' => 'elgg-subtext'], '');
-//        
-//        $line = elgg_format_element('div', ['class' => 'input_box'], $tmp);
-//        $output .= elgg_view_module("inline", '', $line);
+      
+        $tmp = elgg_format_element('div', [], elgg_format_element('strong', [], $key));
+        
+        $param_name_entity = 'entity_lists_' . $key;
+        $param_name = 'params[' . $param_name_entity . ']';
+        $tmp .= elgg_view_input('radio', array(
+            'name' => $param_name, 
+            'value' => ($plugin->$param_name_entity?$plugin->$param_name_entity:EntityListsOptions::EntityLists_NO), 
+            'options' => $potential_yes_no, 
+            'align' => 'horizontal'
+        ));
+        
+        $line = elgg_format_element('div', ['class' => 'input_box'], $tmp);
+        $output .= elgg_view_module("inline", '', $line);
     } 
-    else {
-        if ($key == 'object') {
-            $sub_arr = $t;
+    else if ($key == 'object') {
+        $sub_arr = $t;
 
-            foreach ($sub_arr as $sub) {
-                $tmp = elgg_format_element('div', [], elgg_format_element('strong', [], $sub));
-                
-                $param_name_entity = 'entity_lists_' . $sub;
-                $param_name = 'params[' . $param_name_entity . ']';
-                $tmp .= elgg_view_input('radio', array(
-                    'name' => $param_name, 
-                    'value' => ($plugin->$param_name_entity?$plugin->$param_name_entity:EntityListsOptions::EntityLists_NO), 
-                    'options' => $potential_yes_no, 
-                    'align' => 'horizontal'
-                ));
-                
-                //$tmp .= elgg_format_element('span', ['class' => 'elgg-subtext'], '');
-                
-                $line = elgg_format_element('div', ['class' => 'input_box'], $tmp);
-                $output .= elgg_view_module("inline", '', $line);
-            }
+        foreach ($sub_arr as $sub) {
+            $tmp = elgg_format_element('div', [], elgg_format_element('strong', [], $sub));
+
+            $param_name_entity = 'entity_lists_' . $sub;
+            $param_name = 'params[' . $param_name_entity . ']';
+            $tmp .= elgg_view_input('radio', array(
+                'name' => $param_name, 
+                'value' => ($plugin->$param_name_entity?$plugin->$param_name_entity:EntityListsOptions::EntityLists_NO), 
+                'options' => $potential_yes_no, 
+                'align' => 'horizontal'
+            ));
+
+            $line = elgg_format_element('div', ['class' => 'input_box'], $tmp);
+            $output .= elgg_view_module("inline", '', $line);
         }
     }
 }
