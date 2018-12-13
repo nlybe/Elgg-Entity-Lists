@@ -8,7 +8,7 @@
         "datatables",
         "entity lists"
     ],
-    "homepage": "https://github.com/nlybe/Elgg-DataTablesAPI",
+    "homepage": "https://github.com/nlybe/Elgg-Entity-Lists",
     "license": "GPL-2.0",
     "authors": [
         {
