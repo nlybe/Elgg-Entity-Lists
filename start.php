@@ -10,9 +10,7 @@ elgg_register_event_handler('init', 'system', 'entity_lists_init');
  * entity_lists plugin initialization functions
  */
 function entity_lists_init() {
-    // page handler for privacy_notification
-    elgg_register_page_handler('entity_lists', 'entity_lists_river_page_handler'); 
-    
+   
     if (elgg_get_context() == 'admin' && elgg_is_admin_logged_in()) {
         
         if (EntityListsOptions::isUserEnabled()) {
@@ -56,20 +54,19 @@ function entity_lists_init() {
  * @param type $page
  * @return boolean
  */
-function entity_lists_river_page_handler($page) {
-    
-    // make a URL segment available in page handler script
-    $page_type = elgg_extract(0, $page, '/admin');
-    $vars['page_type'] = $page_type;
-
-    if ($page_type == 'users' || $page_type == 'groups') {
-        echo elgg_view_resource("entity_lists/{$page_type}", $vars);
-    }
-    else {
-        $vars['subtype'] = elgg_extract(1, $page);
-        echo elgg_view_resource("entity_lists/objects", $vars);
-    }
-    
-    
-    return true;
-}
+//function entity_lists_river_page_handler($page) {
+//    
+//    // make a URL segment available in page handler script
+//    $page_type = elgg_extract(0, $page, '/admin');
+//    $vars['page_type'] = $page_type;
+//
+//    if ($page_type == 'users' || $page_type == 'groups') {
+//        echo elgg_view_resource("entity_lists/{$page_type}", $vars);
+//    }
+//    else {
+//        $vars['subtype'] = elgg_extract(1, $page);
+//        echo elgg_view_resource("entity_lists/objects", $vars);
+//    }    
+//    
+//    return true;
+//}

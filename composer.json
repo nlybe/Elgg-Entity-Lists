@@ -8,7 +8,7 @@
         "datatables",
         "entity lists"
     ],
-    "homepage": "https://github.com/nlybe/Elgg-DataTablesAPI",
+    "homepage": "https://github.com/nlybe/Elgg-Entity-Lists",
     "license": "GPL-2.0",
     "authors": [
         {
@@ -19,7 +19,7 @@
     ],
     "require": {
         "composer/installers": ">=1.0.8",
-        "nlybe/datatables_api": ">=2.3.8"
+        "nlybe/datatables_api": ">=3.9"
     },        
     "extra": {
         "installer-name": "entity_lists"

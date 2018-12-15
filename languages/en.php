@@ -4,7 +4,7 @@
  * @package entity_lists
  */
 
-$lang = array(
+return [
 
     'entity_lists' => "Lists of entities",
     
@@ -40,6 +40,4 @@ $lang = array(
     'entity_lists:settings:no' => "No",
     'entity_lists:settings:yes' => "Yes",    
 
-);
-
-add_translation("en", $lang);
+];

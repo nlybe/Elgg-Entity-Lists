@@ -5,7 +5,7 @@
  */
 
 // restrict pages only to admins
-admin_gatekeeper();
+elgg_admin_gatekeeper();
 
 if (!elgg_is_active_plugin('datatables_api')) {
     echo elgg_echo('admin:entity_lists:datatable_api:missing');

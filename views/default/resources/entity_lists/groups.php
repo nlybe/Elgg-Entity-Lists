@@ -12,22 +12,23 @@ $options = array(
     'count' => true,
 );
 
-$options["joins"] = [];
-$options["wheres"] = [];
-$dbprefix = elgg_get_config('dbprefix');
 if ($search && !empty($search['value'])) {
     $query = sanitise_string($search['value']);
-		
-    array_push($options["joins"], "JOIN {$dbprefix}groups_entity ge ON e.guid = ge.guid");
-    array_push($options["wheres"], "(ge.name LIKE '%$query%' OR ge.description LIKE '%$query%')");
+    
+    $options["wheres"] = [
+         function(\Elgg\Database\QueryBuilder $qb, $alias) use($query) {
+            $joined_alias = $qb->joinMetadataTable($alias, 'guid');
+            return $qb->compare("$joined_alias.value", 'like', "%$query%", ELGG_VALUE_STRING);
+         }
+    ];
 }
 
-$totalEntries = elgg_get_entities_from_metadata($options);
+$totalEntries = elgg_get_entities($options);
 
 $options['count'] = false;
 $options['limit'] = max((int) get_input("length", elgg_get_config('default_limit')), 0);
 $options['offset'] = sanitise_int(get_input ("start", 0), false);
-$entities = elgg_get_entities_from_metadata($options);
+$entities = elgg_get_entities($options);
 
 $dt_data = [];
 if ($entities) {
