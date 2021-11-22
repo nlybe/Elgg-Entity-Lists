@@ -4,10 +4,11 @@
  * @package entity_lists
  */
 
+namespace EntityLists;
+
 class EntityListsOptions {
 
     const PLUGIN_ID = 'entity_lists';                   // current plugin ID
-    //const PAPI_SUBTYPE = 'paypal_transaction';      // objects subtype for successful paypal transactions
     const ELYES = 'yes';                         // general purpose value for yes
     const ELNO = 'no';                           // general purpose value for no
  

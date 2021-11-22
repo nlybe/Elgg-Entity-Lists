@@ -14,12 +14,12 @@
         {
             "name": "Nikos Lyberakis",
             "email": "nikos@lyberakis.gr",
-            "role": "Developer"
+            "role": "Web Developer"
         }
     ],
     "require": {
         "composer/installers": ">=1.0.8",
-        "nlybe/datatables_api": ">=3.9"
+        "nlybe/datatables_api": ">=3.10"
     },        
     "extra": {
         "installer-name": "entity_lists"

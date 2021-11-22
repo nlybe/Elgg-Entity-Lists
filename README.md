@@ -1,7 +1,7 @@
 Elgg Entity Lists
 =================
 
-![Elgg 3.0](https://img.shields.io/badge/Elgg-3.0-orange.svg?style=flat-square)
+![Elgg 3.3](https://img.shields.io/badge/Elgg-3.3-orange.svg?style=flat-square)
 
 This plugin allows administrator to see list of entities in admin area for general purpose.
 

@@ -4,7 +4,10 @@
  * @package entity_lists
  */
 
+use EntityLists\Elgg\Bootstrap;
+
 return [
+    'bootstrap' => Bootstrap::class,
     'actions' => [],
     'routes' => [
         'entity_lists:users' => [
