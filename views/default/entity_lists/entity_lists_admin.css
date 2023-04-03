@@ -1,0 +1,8 @@
+/**
+ * Elgg Entity Lists plugin
+ * @package entity_lists
+ */
+
+ #entity_lists-settings .input_box .elgg-field {
+    max-width: 100%;
+  }

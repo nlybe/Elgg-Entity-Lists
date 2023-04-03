@@ -1,5 +1,10 @@
 # Change Log
 
+## 4.6 (Apr 2023)
+
+- Deprecated code fix
+- CSS improvements
+
 ## 4.5 (Apr 2023)
 
 - Upgraded for Elgg 4.3.x compatibility
