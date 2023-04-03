@@ -19,9 +19,12 @@
     ],
     "require": {
         "composer/installers": ">=1.0.8",
-        "nlybe/datatables_api": ">=3.10"
+        "nlybe/datatables_api": "^4.11"
     },        
     "extra": {
         "installer-name": "entity_lists"
-    }
+    },
+	"conflict": {
+		"elgg/elgg": "<4.3"
+	}
 }

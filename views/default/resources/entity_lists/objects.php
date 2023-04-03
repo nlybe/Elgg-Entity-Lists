@@ -15,7 +15,7 @@ $options = array(
 );
 
 if ($search && !empty($search['value'])) {
-    $query = sanitise_string($search['value']);
+    $query = $search['value'];
     
     $options["wheres"] = [
          function(\Elgg\Database\QueryBuilder $qb, $alias) use($query) {
@@ -29,7 +29,7 @@ $totalEntries = elgg_get_entities($options);
 
 $options['count'] = false;
 $options['limit'] = max((int) get_input("length", elgg_get_config('default_limit')), 0);
-$options['offset'] = sanitise_int(get_input ("start", 0), false);
+$options['offset'] = get_input ("start", 0);
 $entities = elgg_get_entities($options);
 
 $dt_data = [];

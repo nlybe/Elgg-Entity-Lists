@@ -7,6 +7,16 @@
 use EntityLists\Elgg\Bootstrap;
 
 return [
+    'plugin' => [
+        'name' => 'Entity Lists',
+		'version' => '4.5',
+		'dependencies' => [
+			'datatables_api' => [
+				'must_be_active' => true,
+                'version' => '>4'
+			]
+		],
+	],
     'bootstrap' => Bootstrap::class,
     'actions' => [],
     'routes' => [

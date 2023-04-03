@@ -8,7 +8,7 @@ namespace EntityLists;
 
 class EntityListsOptions {
 
-    const PLUGIN_ID = 'entity_lists';                   // current plugin ID
+    const PLUGIN_ID = 'entity_lists';            // current plugin ID
     const ELYES = 'yes';                         // general purpose value for yes
     const ELNO = 'no';                           // general purpose value for no
  
