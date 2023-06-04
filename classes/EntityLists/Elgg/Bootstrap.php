@@ -27,9 +27,6 @@ class Bootstrap extends DefaultPluginBootstrap {
 	 */
 	protected function initViews() {
 		
-		// register extra css
-		elgg_extend_view('css/admin', 'entity_lists/entity_lists_admin.css');
-				
 		if (elgg_get_context() == 'admin' && elgg_is_admin_logged_in()) {
         
 			if (EntityListsOptions::isUserEnabled()) {

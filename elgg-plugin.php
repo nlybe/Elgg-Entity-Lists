@@ -9,7 +9,7 @@ use EntityLists\Elgg\Bootstrap;
 return [
     'plugin' => [
         'name' => 'Entity Lists',
-		'version' => '4.6',
+		'version' => '4.7',
 		'dependencies' => [
 			'datatables_api' => [
 				'must_be_active' => true,
@@ -37,5 +37,10 @@ return [
     'views' => [
         'default' => [],
     ],
+	'view_extensions' => [
+		'css/admin' => [
+			'entity_lists/entity_lists_admin.css' => [],
+		],
+	],
     'upgrades' => [],
 ];
