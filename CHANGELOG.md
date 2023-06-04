@@ -1,5 +1,9 @@
 # Change Log
 
+## 4.71 (June 2023)
+
+- Replaced the deprecated function **get_registered_entity_types()** with **elgg_entity_types_with_capability()**
+
 ## 4.7 (June 2023)
 
 - Moved css declaration to elgg-plugins.php

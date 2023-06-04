@@ -9,7 +9,7 @@ use EntityLists\Elgg\Bootstrap;
 return [
     'plugin' => [
         'name' => 'Entity Lists',
-		'version' => '4.7',
+		'version' => '4.71',
 		'dependencies' => [
 			'datatables_api' => [
 				'must_be_active' => true,

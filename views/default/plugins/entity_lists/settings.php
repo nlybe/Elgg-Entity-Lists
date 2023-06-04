@@ -8,7 +8,7 @@ use EntityLists\EntityListsOptions;
 
 $plugin = elgg_get_plugin_from_id(EntityListsOptions::PLUGIN_ID);
 
-$types = get_registered_entity_types();
+$types = elgg_entity_types_with_capability('searchable');
 $output = elgg_format_element(
     'div', 
     ['style' => 'margin: 0 0 15px;'], 
@@ -32,9 +32,7 @@ foreach ($types as $key => $t) {
         $output .= elgg_view_module("inline", '', $line);
     } 
     else if ($key == 'object') {
-        $sub_arr = $t;
-        foreach ($sub_arr as $sub) {
-        
+        foreach ($t as $sub) {
             $param_name_entity = 'entity_lists_' . $sub;
             $param_name = 'params[' . $param_name_entity . ']';
             $line = elgg_format_element('div', ['class' => 'input_box'], elgg_view_field([

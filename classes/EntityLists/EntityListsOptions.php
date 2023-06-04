@@ -33,10 +33,10 @@ class EntityListsOptions {
     Public Static function getEnabledEntities() {
         $enables_types = [];
         
-        $types = get_registered_entity_types();
+        $types = elgg_entity_types_with_capability('searchable');
         foreach ($types as $key => $t) {
             if ($key == 'object') {
-                foreach ($t as $sub) {
+                foreach ($t as $sub) {                    
                     $setting = self::getParams('entity_lists_'.$sub);
                     if ($setting == self::ELYES) {
                         array_push($enables_types, $sub);
