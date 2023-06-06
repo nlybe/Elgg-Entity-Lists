@@ -11,7 +11,7 @@ return [
     // admin
     'menu:page:header:entity_lists_section' => 'List Entities',
     'admin:entity_lists:menu:elgg_objects' => 'Elgg Objects',
-    'admin:entity_lists' => 'Lists of entities',
+    'admin:entity_lists' => 'Entities',
     'admin:entity_lists:user' => 'List of Elgg User Entities',
     'admin:entity_lists:group' => 'List of Elgg Group Entities',
     'admin:entity_lists:object' => 'List of Elgg Object Entities',

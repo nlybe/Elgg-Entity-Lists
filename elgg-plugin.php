@@ -6,10 +6,12 @@
 
 use EntityLists\Elgg\Bootstrap;
 
+require_once(dirname(__FILE__) . '/lib/events.php');
+
 return [
     'plugin' => [
         'name' => 'Entity Lists',
-		'version' => '5.8',
+		'version' => '5.8.1',
 		'dependencies' => [
 			'datatables_api' => [
 				'must_be_active' => true,
@@ -32,6 +34,13 @@ return [
             'path' => '/entity_lists/objects/{subtype}',
             'resource' => 'entity_lists/objects',
         ],
+    ],
+    'events' => [
+		'register' => [
+			'menu:admin_header' => [
+				'entity_lists_admin_menu' => ['priority' => 510],
+			],
+        ],        
     ],
     'widgets' => [],
     'views' => [

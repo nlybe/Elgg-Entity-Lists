@@ -1,5 +1,9 @@
 # Change Log
 
+## 5.8.1 (June 2023)
+
+- Moved admin menu for entities list to topbar
+
 ## 5.8 (June 2023)
 
 - Upgraded for Elgg 5.x compatibility
