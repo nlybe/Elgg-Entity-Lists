@@ -1,5 +1,9 @@
 # Change Log
 
+## 5.8 (June 2023)
+
+- Upgraded for Elgg 5.x compatibility
+
 ## 4.71 (June 2023)
 
 - Replaced the deprecated function **get_registered_entity_types()** with **elgg_entity_types_with_capability()**

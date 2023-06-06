@@ -9,11 +9,11 @@ use EntityLists\Elgg\Bootstrap;
 return [
     'plugin' => [
         'name' => 'Entity Lists',
-		'version' => '4.71',
+		'version' => '5.8',
 		'dependencies' => [
 			'datatables_api' => [
 				'must_be_active' => true,
-                'version' => '>4'
+                'version' => '>5'
 			]
 		],
 	],
